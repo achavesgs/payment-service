@@ -43,11 +43,11 @@ public class PaymentRepositoryImpl implements PaymentRepository {
         return null;
     }
 
-    public PaymentDTO delete(int idPagamento) {
+    public String delete(int idPagamento) {
         for (int i = 0; i < paymentList.size(); i++) {
             if (paymentList.get(i).getIdTransacao() == idPagamento) {
                 paymentList.remove(i);
-                return paymentList.get(i);
+                return "Excluído com sucesso.";
             }
         }
         return null;

@@ -38,8 +38,8 @@ public class Service {
     }
 
     @RequestMapping(value="delete/{idTransacao}", method = RequestMethod.DELETE)
-    public ResponseEntity<PaymentDTO> delete(@Valid @RequestBody int idTransacao) {
-        return new ResponseEntity<PaymentDTO>(paymentRepository.delete(idTransacao), HttpStatus.valueOf(200));
+    public ResponseEntity<String> delete(@PathVariable(value="idTransacao") int idTransacao) {
+        return new ResponseEntity<String>(paymentRepository.delete(idTransacao), HttpStatus.valueOf(200));
     }
 
 }

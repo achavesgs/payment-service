@@ -7,6 +7,6 @@ public interface PaymentRepository {
     public PaymentDTO findById(int idTransacao);
     public PaymentDTO save(PaymentDTO paymentDTO);
     public PaymentDTO update(PaymentDTO paymentDTO);
-    public PaymentDTO delete(int idPagamento);
+    public String delete(int idPagamento);
 
 }

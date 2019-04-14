@@ -2,11 +2,23 @@ package br.com.fiap.paymentservice.dto;
 
 import java.math.BigDecimal;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class PaymentDTO {
+	
+	@ApiModelProperty(notes = "The database generated Order ID")
     private int idTransacao;
+	
+	@ApiModelProperty(notes = "Credit card Number")
     private int nroCartao;
+	
+	@ApiModelProperty(notes = "Validity Date")
     private String validadeCartao;
+	
+	@ApiModelProperty(notes = "Amount")
     private BigDecimal valorCompra;
+	
+	@ApiModelProperty(notes = "Credit Card Banner")
     private String bandeira;
 
     public int getIdTransacao() {
